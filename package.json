@@ -1,7 +1,6 @@
 {
 	"name": "payment",
 	"version": "1.0.0",
-	"homepage": "https://ttpsiony.github.io/F2E_payment/.",
 	"private": true,
 	"keywords": [
 		"F2E"
