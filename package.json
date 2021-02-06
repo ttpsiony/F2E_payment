@@ -1,6 +1,7 @@
 {
 	"name": "payment",
 	"version": "1.0.0",
+	"homepage": "https://ttpsiony.github.io/F2E_payment/build/.",
 	"private": true,
 	"keywords": [
 		"F2E"
@@ -89,7 +90,7 @@
 		"build": "node scripts/build.js",
 		"test": "node scripts/test.js",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -b main -d deploy"
+		"deploy": "gh-pages -d deploy"
 	},
 	"eslintConfig": {
 		"extends": [
