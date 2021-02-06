@@ -22,6 +22,7 @@ export default function Info() {
 		isCopyContact,
 		paymentInfo: { orderer: ordererValues, receiver: receiverValues },
 	} = state;
+	const [goNext, setGoNext] = useState(false);
 	const [agree, setAgree] = useState(false);
 	const [isOrderValid, setIsOrderValid] = useState(false);
 	const [isReceiveValid, setIsReceiveValid] = useState(false);
@@ -45,7 +46,9 @@ export default function Info() {
 		const canNext = validation.every((isTrue) => isTrue);
 
 		if (canNext) {
-			history.push('/step3');
+			setGoNext(true);
+		} else {
+			setGoNext(false);
 		}
 	}, [history, paymentApproach, agree, isOrderValid, isReceiveValid, isCreditValid]);
 
@@ -57,6 +60,10 @@ export default function Info() {
 		ordererFormBtn.current.click();
 		receiveFormBtn.current.click();
 		paymentApproach === 'credit' && creditCardFormBtn.current.click();
+
+		if (goNext) {
+			history.push('/step3');
+		}
 	};
 
 	return (
