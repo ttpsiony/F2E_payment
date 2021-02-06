@@ -20,13 +20,13 @@ export default function Confirm() {
 		}
 		const isToRedirect = Object.keys(receiver).some((el) => el === '');
 		if (isToRedirect || !paymentApproach) {
-			history.push('/step1');
+			history.push('/payment/step1');
 		}
 	}, [paymentApproach, receiver, history]);
 
 	const onClickInitPaymentHandler = () => {
 		dispatch(actions.initPaymentInfo());
-		history.push('/step1');
+		history.push('/payment/step1');
 	};
 
 	return (
