@@ -10,7 +10,7 @@ function App() {
 	routes = (
 		<Switch>
 			<Route
-				path="/payment/:step"
+				path="F2E_payment/payment/:step"
 				children={({ match }) => {
 					const {
 						params: { step },
@@ -22,16 +22,16 @@ function App() {
 						return (
 							<div className="md:container md:mx-auto px-base">
 								<Header />
-								<Route path="/payment/step1" component={Method} />
-								<Route path="/payment/step2" component={Information} />
-								<Route path="/payment/step3" component={Confirm} />
+								<Route path="F2E_payment/payment/step1" component={Method} />
+								<Route path="F2E_payment/payment/step2" component={Information} />
+								<Route path="F2E_payment/payment/step3" component={Confirm} />
 							</div>
 						);
 					}
-					return <Redirect to="/step1" />;
+					return <Redirect to="F2E_payment/payment/step1" />;
 				}}
 			/>
-			<Redirect to="/payment/step1" />
+			<Redirect to="F2E_payment/payment/step1" />
 		</Switch>
 	);
 
