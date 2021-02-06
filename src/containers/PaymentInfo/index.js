@@ -32,7 +32,7 @@ export default function Info() {
 
 	useEffect(() => {
 		if (!paymentApproach) {
-			history.push('/payment/step1');
+			history.push('/step1');
 		}
 	}, [paymentApproach, history]);
 
@@ -45,12 +45,12 @@ export default function Info() {
 		const canNext = validation.every((isTrue) => isTrue);
 
 		if (canNext) {
-			history.push('/payment/step3');
+			history.push('/step3');
 		}
 	}, [history, paymentApproach, agree, isOrderValid, isReceiveValid, isCreditValid]);
 
 	const onClickPrevStepBtnHandler = () => {
-		history.push('/payment/step1');
+		history.push('/step1');
 	};
 
 	const onClickNextStepBtnHandler = () => {

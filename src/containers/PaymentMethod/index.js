@@ -11,7 +11,7 @@ export default function Method() {
 	const { paymentApproach } = state;
 
 	const onClickNextStepBtnHandler = () => {
-		paymentApproach && history.push('/payment/step2');
+		paymentApproach && history.push('/step2');
 	};
 
 	return (

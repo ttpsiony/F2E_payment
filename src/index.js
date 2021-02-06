@@ -11,7 +11,7 @@ function Index() {
 
 	return (
 		<React.StrictMode>
-			<BrowserRouter basename="F2E_payment">
+			<BrowserRouter basename="F2E_payment/payment">
 				<ContextStore.Provider
 					value={{
 						state,
