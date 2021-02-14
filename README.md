@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is F2E side project and access with tailwindcss and formik library.
+This is F2E side project and access to tailwindcss and formik library.
 
 ## Reference
 
